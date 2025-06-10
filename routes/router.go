@@ -13,4 +13,6 @@ func RoutesRegister(router *mux.Router) {
 		fmt.Println("Welcome to File to Base64 API 🎉")
 	})
 	router.HandleFunc("/document", services.GetDocument).Methods("GET")
+	router.HandleFunc("/ping", services.MakePing).Methods("GET")
+	router.HandleFunc("/document/base64", services.FetchPDFBase64).Methods("GET")
 }
